@@ -1,0 +1,37 @@
+nav {
+    background-color: rgb(250, 242, 228);
+    margin: 0;
+    padding: 16px;
+    height: 45px;
+    display: flex;
+}
+
+.nav_links {
+    margin: 0 auto;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img_candle {
+    margin-left: 30px;
+    width: 75px;
+    height: 50px;
+}
+
+.link {
+    margin: 0 8px;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+img.img_login {
+    width: 25px;
+    height: 25px;
+}
+
+img.img_cart {
+    width: 25px;
+    height: 25px;
+}
