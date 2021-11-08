@@ -1,0 +1,167 @@
+@import 'reset';
+@import 'typography';
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color:#f3f7ff
+}
+
+@mixin flex($wrap-nowrap, $align-items, $justify-content) {
+    display: flex;
+    align-items: $align-items;
+    justify-content: $justify-content;
+    flex-wrap: $wrap-nowrap;
+}
+
+
+.task {
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    @include flex(nowrap, center, flex-start);
+    padding: 16px;
+    border-radius: 10px;
+    font-family: Poppins, sans-serif;
+    font-size: 12px;
+    margin: auto;
+    &_thumbnail {
+        background-color: blue;
+        border-radius: 10px;
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+        @include flex(nowrap, center, center);
+        .calendar {
+            width: 15px;
+            height: 15px;
+        }
+    }
+}
+
+.progress_section {
+    margin: 16px;
+    padding: 0 16px;
+}
+
+nav {
+    @include flex(nowrap, center, space-between);
+    padding: 20px;
+}
+
+.menu_icon {
+    width: 60%;
+}
+.personal_icon {
+    width: 6%; 
+}
+
+// div.container 
+//      h1.title
+//      p.subtitle  
+
+.container {
+    padding: 16px;
+    margin: 0px;
+    color: #2E3A59;
+    font-family: Poppins, sans-serif;
+    
+}
+.title {
+    margin: 0;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    opacity: 0.54;
+    font-size: 15px;
+    margin: 0;
+    font-size: 12px;
+
+    
+}
+.buttons {
+    @include flex(wrap, center, space-around);
+    padding: 20px;
+
+}
+.btn {
+    border-radius: 20px;
+    width: 90px;
+    height: 40px;
+    border: none;
+    font-size: 12px;
+    background-color: #E5EAFC;
+    font-family: Poppins, sans-serif;
+    color: rgb(46, 46, 46);
+    &:hover {
+        background-color: white;
+        color: rgb(33, 33, 33); 
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(36, 28, 189);
+    color: white;
+    font-family: Poppins, sans-serif;
+    border-radius: 15px;
+    width: 300px;
+    align-content: center;
+    margin: auto;
+}
+
+
+.content {
+    height: 90px;
+    padding: 0 16px;
+    
+}
+
+.card_top {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    padding: 16px 0 16px 16px;
+    
+   
+}
+
+.date {
+    font-size: 12px; 
+    margin-top: auto;
+    padding: 16px;
+}
+
+.thumbnail {
+    width: 30px;
+    height: 30px;
+    background-color: rgb(200, 96, 252);
+    margin-right: 12px;
+}
+
+.bottom_icons {
+    @include flex(wrap, center, space-around);
+}
+
+.bottom_icons img {
+    width: 7%;
+    }
+
+.footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+
+
+// .selector, .selector_2
+// .selector filho
+// .select > .filho directo
