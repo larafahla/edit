@@ -84,7 +84,7 @@ nav {
     font-size: 12px;
 
     
-}
+}§
 .buttons {
     @include flex(wrap, center, space-around);
     padding: 20px;
@@ -98,7 +98,7 @@ nav {
     font-size: 12px;
     background-color: #E5EAFC;
     font-family: Poppins, sans-serif;
-    color: rgb(46, 46, 46);
+    color: rgb(46, 46, 46); SSS
     &:hover {
         background-color: white;
         color: rgb(33, 33, 33); 
