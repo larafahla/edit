@@ -67,7 +67,7 @@ html, body {
 
 .task {
   width: 100%;
-  height: 50px;
+  height: 60px;
   background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -84,12 +84,13 @@ html, body {
   border-radius: 10px;
   font-family: Poppins, sans-serif;
   font-size: 12px;
-  margin: auto;
+  margin: 12px 0;
 }
 
 .task_thumbnail {
-  background-color: blue;
-  border-radius: 10px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#9851f5), to(#2134bd));
+  background-image: linear-gradient(#9851f5, #2134bd);
+  border-radius: 6px;
   width: 30px;
   height: 30px;
   margin-right: 10px;
@@ -111,9 +112,22 @@ html, body {
   height: 15px;
 }
 
+.task_parent {
+  width: 100%;
+  padding: 0px 30px 0px 30px;
+}
+
+.task_date {
+  font-size: 10px;
+  color: #a7a7a7;
+  margin-top: 6px;
+}
+
 .progress_section {
-  margin: 16px;
-  padding: 0 16px;
+  margin: 36px 0px 16px 28px;
+  font-family: 'Poppins';
+  font-weight: 500;
+  color: #383838;
 }
 
 nav {
@@ -136,7 +150,7 @@ nav {
 }
 
 .personal_icon {
-  width: 6%;
+  width: 60%;
 }
 
 .container {
@@ -193,11 +207,14 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+  overflow: hidden;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #241cbd;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#9851f5), to(#2134bd));
+  background-image: linear-gradient(#9851f5, #2134bd);
   color: white;
   font-family: Poppins, sans-serif;
   border-radius: 15px;
@@ -207,9 +224,30 @@ nav {
   margin: auto;
 }
 
+.card::before, .card::after {
+  content: "";
+  position: absolute;
+  height: 250px;
+  width: 250px;
+  border-radius: 150px;
+  background-color: #9851f5;
+  opacity: 20%;
+}
+
+.card::before {
+  bottom: -181px;
+  left: -70px;
+}
+
+.card::after {
+  top: -146px;
+  right: -60px;
+}
+
 .content {
   height: 90px;
   padding: 0 16px;
+  z-index: 1;
 }
 
 .card_top {
@@ -227,13 +265,28 @@ nav {
   font-size: 12px;
   margin-top: auto;
   padding: 16px;
+  z-index: 1;
 }
 
 .thumbnail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 30px;
   height: 30px;
-  background-color: #c860fc;
+  background-color: #a673f8;
   margin-right: 12px;
+  border-radius: 5px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+img.card_thumbail {
+  width: 80%;
 }
 
 .bottom_icons {
@@ -250,12 +303,40 @@ nav {
 }
 
 .bottom_icons img {
-  width: 7%;
+  width: 5%;
 }
 
 .footer {
   position: fixed;
   width: 100%;
   bottom: 0;
+}
+
+.second_nav {
+  background-color: #3030a7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.middle_text {
+  font-family: Poppins;
+  font-size: 14px;
+}
+
+.arrow_icon {
+  width: 60%;
+}
+
+.search_icon {
+  width: 60%;
 }
 /*# sourceMappingURL=style.css.map */
