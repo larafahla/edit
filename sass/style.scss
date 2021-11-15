@@ -206,7 +206,7 @@ img.card_thumbail {
 .footer {
     position: fixed;
     width: 100%;
-    bottom: 0;
+    bottom: 15px;
 }
 
 .second_nav {
@@ -217,6 +217,7 @@ img.card_thumbail {
 .middle_text {
     font-family: Poppins;
     font-size: 14px;
+    color: white;
 }
 
 .arrow_icon {
@@ -224,6 +225,55 @@ img.card_thumbail {
 }
 .search_icon {
     width: 60%;
+}
+
+.input_parent {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    justify-content: flex-start;
+  }
+
+
+.design_changes {
+    border: 0;
+    font-size: 20px;
+    font-family: Poppins;
+    margin: 12px 0;
+}
+
+
+.oct_24 {
+    border: 0;
+    font-size: 20px;
+    font-family: Poppins;
+      margin: 12px 0;
+}
+
+.title_date {
+    font-family: Poppins;
+    font-size: 12px;
+}
+.title_name {
+    font-family: Poppins;
+    font-size: 12px;
+}
+
+.task_button {
+    @include flex(nowrap, center, center);
+    padding-bottom: 30px;
+}
+
+.add_task_button {
+    border: 0;
+    width: 170px;
+    height: 40px;
+    background-color: #5E6CEA;
+    border-radius: 0.2rem;
+}
+.add_task_text {
+    font-family: Poppins;
+    color: white;
 }
 
 

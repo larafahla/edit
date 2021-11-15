@@ -309,7 +309,7 @@ img.card_thumbail {
 .footer {
   position: fixed;
   width: 100%;
-  bottom: 0;
+  bottom: 15px;
 }
 
 .second_nav {
@@ -330,6 +330,7 @@ img.card_thumbail {
 .middle_text {
   font-family: Poppins;
   font-size: 14px;
+  color: white;
 }
 
 .arrow_icon {
@@ -338,5 +339,71 @@ img.card_thumbail {
 
 .search_icon {
   width: 60%;
+}
+
+.input_parent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 40px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.design_changes {
+  border: 0;
+  font-size: 20px;
+  font-family: Poppins;
+  margin: 12px 0;
+}
+
+.oct_24 {
+  border: 0;
+  font-size: 20px;
+  font-family: Poppins;
+  margin: 12px 0;
+}
+
+.title_date {
+  font-family: Poppins;
+  font-size: 12px;
+}
+
+.title_name {
+  font-family: Poppins;
+  font-size: 12px;
+}
+
+.task_button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  padding-bottom: 30px;
+}
+
+.add_task_button {
+  border: 0;
+  width: 170px;
+  height: 40px;
+  background-color: #5E6CEA;
+  border-radius: 0.2rem;
+}
+
+.add_task_text {
+  font-family: Poppins;
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */
