@@ -44,9 +44,6 @@ img.img_login {
 .search_bar {
     display: flex;
     justify-content: center;
-    width: 150px;
-    height: 40px;
-    
 }
 
 .search_items {
@@ -54,8 +51,10 @@ img.img_login {
     font-size: 12px;
     background-color: #f7f7f7;
     border-radius: 20px;
-    border: 0;
     padding: 0 0 0 14px;
+    width: 200px;
+    outline: none;
+    border: 1px solid rgb(74, 74, 74);
 }
 
 .nav_icons {
@@ -66,12 +65,24 @@ img.img_login {
 .container {
     display: block;
     position: relative;
-    width: 80%;
-    margin: 32px auto;
+    width: 60%;
+    margin: 90px auto;
 }
 
-img.splash_img {
+.splash_img {
     width: 100%;
+}
+
+.splash_text {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    font-size: 54px;
+    color: white;
+    bottom: 238px;
+    right: 56px;
 }
 
 .shop_button {
@@ -87,21 +98,59 @@ img.splash_img {
     border-radius: 30px;
     color: black;
     font-size: 16px;
-    bottom: 200px;
+    bottom: 150px;
     right: 55px;
 }
 
 .container .shop_button:hover {
     background-color: rgb(31, 31, 32);
     color: white;
-
 }
 
+.card_parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.card_body {
+    padding: 16px 0 0 0;
+    border-top: none;
+}
 
+.card_thumbnail {
+    overflow: hidden;
+    width: 220px;
+    background-color: #ffffff;
+    border: 1px solid #bbbbbb;
+    border-radius: 12px;
+    margin: 16px;
+}
 
+img.card_image {
+    width: 220px;
+    object-fit: cover;
+    object-position: top;
+}
 
+h1 {
+    font-family: sans-serif;
+    font-size: 50px;
+    padding: 24px;
+}
 
+.subtitle {
+    font-family: sans-serif;
+    font-size: 40px;
+    padding: 24px;
+    text-align: center;
+}
+
+h5 {
+    font-family: sans-serif;
+    font-size: 16px;
+    padding: 0 0 16px 16px;
+}
 
 
 
