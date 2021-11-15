@@ -18,7 +18,6 @@ html, body {
     flex-wrap: $wrap-nowrap;
 }
 
-
 .task {
     width: 100%;
     height: 60px;
@@ -152,9 +151,6 @@ nav {
     }
 }
 
-
-
-
 .content {
     height: 90px;
     padding: 0 16px;
@@ -210,7 +206,6 @@ img.card_thumbail {
 }
 
 .second_nav {
-    background-color: rgb(48, 48, 167);
     @include flex(nowrap, center, space-between);
 }
 
@@ -239,44 +234,98 @@ img.card_thumbail {
     border: 0;
     font-size: 20px;
     font-family: Poppins;
+    font-weight: 600;
     margin: 12px 0;
+    background: transparent;
+    color: white;
+    border-bottom: 1px solid #ffffff;
+    outline: none;
+    width: 100%;
+    
 }
-
 
 .oct_24 {
     border: 0;
     font-size: 20px;
     font-family: Poppins;
-      margin: 12px 0;
+    font-weight: 600;
+    margin: 12px 0;
+    background: transparent;
+    color: white;
+    border-bottom: 1px solid #ffffff;
+    outline: none;
+    width: 100%;
 }
 
 .title_date {
     font-family: Poppins;
     font-size: 12px;
+    color: white;
 }
 .title_name {
     font-family: Poppins;
     font-size: 12px;
+    color: white;
 }
 
 .task_button {
     @include flex(nowrap, center, center);
-    padding-bottom: 30px;
 }
 
 .add_task_button {
     border: 0;
-    width: 170px;
-    height: 40px;
+    width: 180px;
+    height: 50px;
     background-color: #5E6CEA;
     border-radius: 0.2rem;
+   
 }
 .add_task_text {
     font-family: Poppins;
     color: white;
+    
 }
 
+.task_container {
+    background-image: linear-gradient(#707CED, #14458E);
+    padding: 0 0 32px 0;
+}
 
+.dot-icon {
+    background: #b7b7b7;
+    width: 4px;
+    height: 4px;
+    border-radius: 100%;
+    position: relative;
+}
+
+.dot-icon::after {
+    content: '';
+    background: inherit;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 10px;
+    border-radius: inherit;
+}
+
+.dot-icon::before {
+    content: '';
+    background: inherit;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    bottom: 10px;
+    border-radius: inherit;
+}
+
+.task_actions {
+    margin-left: auto;
+}
+
+.task_grandparent {
+    padding: 30px 0 0 0;
+}
 
 // .selector, .selector_2
 // .selector filho
