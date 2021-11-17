@@ -216,6 +216,68 @@ h5 {
     padding-right: 22px;
 }
 
+.sidebar {
+    width: 280px;
+    min-height: 100vh;
+    background-color: white;
+    font-family: Open sans;
+}
+
+.top_info {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 22px 44px;
+}
+
+.items_found {
+    border-bottom: 1px solid rgb(166, 166, 166);
+    padding-bottom: 20px;
+}
+
+.sex_filter {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 0 40px;
+}
+
+.sex {
+    margin-bottom: 35px;
+}
+
+.men {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.women {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.unisex {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.check_box {
+    border: 1px solid #d7d7d7;
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+    margin-right: 12px;
+}
+
+
+
+
 /* helpers */
 .d-flex {
     display: flex;
@@ -235,3 +297,4 @@ h5 {
 .justify-start {
     justify-content: flex-start;
 }
+
