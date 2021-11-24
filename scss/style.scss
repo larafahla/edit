@@ -2,3 +2,9 @@
 @import 'variables';
 @import 'utils';
 @import 'grid';
+
+.imgfit {
+    display: block;
+    width: 100%;
+    height: auto;
+}
