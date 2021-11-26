@@ -1,0 +1,147 @@
+@import 'reset';
+@import 'typography';
+@import 'normalize';
+@import 'variables';
+@import 'utils';
+@import 'grid';
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin flex($wrap-nowrap, $align-items, $justify-content) {
+    display: flex;
+    align-items: $align-items;
+    justify-content: $justify-content;
+    flex-wrap: $wrap-nowrap;
+}
+
+.background {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+}
+
+.background_image {
+    width: 100%;
+}
+
+.navbar {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 80px;
+    background-color: black;
+    opacity: 80%;
+    z-index: 10000000;
+}
+
+.logo {
+    font-family: Roboto mono;
+    font-size: 14px;
+    color: white;
+    padding: 30px 0px 0px 36px;
+}
+
+.menu_container {
+    display: inline-block;
+    cursor: pointer;
+    margin: 20px 20px 0px 0px;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 2px;
+    background-color: white;
+    margin: 8px 0;
+    transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+  }
+  
+  /* Fade out the second bar */
+  .change .bar2 {
+    opacity: 0;
+  }
+  
+  /* Rotate last bar */
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+  }
+
+.text_container {
+   margin: 0;
+}
+
+
+.gridrow.texthero {
+    font-family: Roboto mono;
+    font-size: 42px;
+    color: white;
+    position: absolute;
+    bottom: 30px;
+}
+
+/* Portfolio page */
+ 
+body {
+    background-color: rgb(0, 0, 0);
+ }
+
+ .cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.thumbnail {
+    width: 30%;
+}
+
+.col-3.textright {
+    text-align: right;
+}
+
+input[type="checkbox"]{
+    display: none;
+}
+
+.menu {
+    font-family: Roboto mono;
+    font-size: 66px;
+    color: white;
+    padding-left: 200px;
+    font-weight: 700;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: black;
+    width: 100%;
+    z-index: 5000;
+    top: -100vh;
+    transition: top 1s ease;
+}
+
+p {
+    padding-bottom: 40px;
+}
+
+input[type="checkbox"]:checked ~ .menu{
+    top: 0;
+}
