@@ -1,0 +1,24 @@
+@import 'normalize';
+@import 'variables';
+@import 'fonts';
+@import 'utils';
+@import 'grid';
+@import 'pages';
+
+video {
+    width: 100%;
+    height: auto;
+}
+    
+#outro-video-aqui {
+    position: relative;
+    height: 0;
+    padding-bottom: percentage(9/16);
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
