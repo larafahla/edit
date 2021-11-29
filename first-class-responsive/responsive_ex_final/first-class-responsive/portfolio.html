@@ -8,56 +8,69 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <input type="checkbox" id="main-menu-check" />
     <nav class="navbar">
-        <div class="nav_logo">
-            <p class="logo">MyStuff</p>
+        <div class="gridrow">
+            <div class="col-3">
+                <p class="logo">MyStuff</p>
+            </div>
+            <div class="col-3 textright">
+            <label class="menu_container" for="main-menu-check">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+        </label>
         </div>
-
-        <div class="menu_container" onclick="myFunction(this)">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-        
-      </div>
-
+    </div>
     </nav>
 
-    <div class="cards">
-        <div class="thumbnail">
+    <div class="menu">
+        <p>Home</p>
+        <p>Graphic</p>
+        <p>Web</p>
+        <p>Contact</p>
+    </div>
+
+    <section class="projects gridrow">
+            <div class="projects-detail-list col-6">
+                <ul>
+                    <li><a href="">All</a></li>
+                    <li><a href="">Graphic</a></li>
+                    <li><a href="">Web</a></li>
+                </ul>
+            </div>
+    </section>
+
+    <div class="gridrow image_list">
+        <div class="col-6 col-t-3 col-d-2">
             <img src="/first-class-responsive/images/x9v0cfg3 1.png" alt="">
         </div>
-        <div class="thumbnail">
+        <div class="col-6 col-t-3 col-d-2">
             <img src="/first-class-responsive/images/u9jgrah0 1.png" alt="">
         </div>
-        <div class="thumbnail">
+        <div class="col-6 col-t-3 col-d-2">
             <img src="/first-class-responsive/images/b0u58yxh 1.png" alt="">
         </div>
-        <div class="thumbnail">
+        <div class="col-6 col-t-3 col-d-2">
             <img src="/first-class-responsive/images/n2ghvi9c 1.png" alt="">
         </div>
-        <div class="thumbnail">
+        <div class="col-6 col-t-3 col-d-2">
             <img src="/first-class-responsive/images/pn1f1pey 1.png" alt="">
         </div>
-        <div class="thumbnail">
+        <div class="col-6 col-t-3 col-d-2">
             <img src="/first-class-responsive/images/74isv327 1.png" alt="">
         </div>
-        <div class="thumbnail">
+        <div class="col-6 col-t-3 col-d-2">
             <img src="/first-class-responsive/images/kudypmy5 1.png" alt="">
         </div>
-        <div class="thumbnail">
+        <div class="col-6 col-t-3 col-d-2">
             <img src="/first-class-responsive/images/fei35l55 1.jpg" alt="">
         </div>
-        <div class="thumbnail">
+        <div class="col-6 col-t-3 col-d-2">
             <img src="/first-class-responsive/images/pscj9hrz 1.png" alt="">
         </div>
 
     </div>
-
-    <script>
-        function myFunction(x) {
-          x.classList.toggle("change");
-        }
-        </script>
     
 </body>
 </html>
