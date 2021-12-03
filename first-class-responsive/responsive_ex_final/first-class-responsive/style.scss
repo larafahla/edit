@@ -144,6 +144,11 @@ input[type="checkbox"]{
     z-index: 5000;
     top: -100vh;
     transition: top 1s ease;
+     p {
+        &:hover {
+            color: rgb(204, 103, 103);
+            }
+    }
 }
 
 p {
@@ -157,7 +162,10 @@ input[type="checkbox"]:checked ~ .menu{
 .gridrow.image_list img {
     width: 100%;
     height: auto;
-    margin-top: $gridgutter; 
+    &:hover {
+    transform: scale(1.25);
+    overflow: hidden;
+    }
   }
 
 
@@ -166,10 +174,24 @@ input[type="checkbox"]:checked ~ .menu{
     ul {
         list-style-type: none;
         padding: 0;
+        font-family: Roboto mono;
+        font-size: 28px;
         li {
             display: inline-block;
+                a {
+                    text-decoration: none;
+                    color: white;
+                        &:hover {
+                            color: rgb(204, 103, 103);
+                            }
+                    }
+                }
         }
     }
+
+.image-parent {
+    overflow: hidden;
+    margin-top: $gridgutter; 
 }
 
 
