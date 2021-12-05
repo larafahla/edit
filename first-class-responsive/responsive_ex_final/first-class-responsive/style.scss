@@ -14,12 +14,49 @@ html, body {
     padding: 0;
 }
 
-@mixin flex($wrap-nowrap, $align-items, $justify-content) {
+@mixin flex($direction, $wrap-nowrap, $align-items, $justify-content) {
     display: flex;
+    flex-direction: $direction;
+    flex-wrap: $wrap-nowrap;
     align-items: $align-items;
     justify-content: $justify-content;
-    flex-wrap: $wrap-nowrap;
 }
+
+.footer {
+    background-color: rgba($graydark, 0.6);
+    padding: 30px 0;
+    width: 100%;
+    .details {
+        @include flex(row, -nowrap, center, space-between);
+
+        a {
+            font-size: 16px;
+            font-family: Roboto mono;
+            color: white;
+            text-decoration: none;
+        }
+    }
+}
+
+.footer-fixed {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba($graydark, 0.6);
+    padding: 30px 0;
+    .details {
+        @include flex(row, -nowrap, center, space-between);
+
+        a {
+            font-size: 16px;
+            font-family: Roboto mono;
+            color: white;
+            text-decoration: none;
+
+        }
+    }
+}
+
 
 .background {
     background-repeat: no-repeat;
@@ -57,13 +94,13 @@ html, body {
     font-family: Roboto mono;
     font-size: 18px;
     color: white;
-    padding: 30px 0px 0px 36px;
+    padding: 30px 0px 0px 0px;
 }
 
 .menu_container {
     display: inline-block;
     cursor: pointer;
-    margin: 20px 20px 0px 0px;
+    margin: 20px 0px 0px 0px;
 }
 
 .bar1, .bar2, .bar3 {
@@ -308,7 +345,47 @@ img {
     }
 }
 
+/* Contact page */
 
+.contact-info {
+    h1 {
+        padding-top: 140px;
+        font-size: 24px;
+        font-family: Roboto mono;
+        color: white;
+    }
 
+    p {
+        margin-top: 50px;
+        padding: 0;
+        font-size: 16px;
+        font-weight: 200;
+        line-height: 21px;
+        font-family: Roboto mono;
+        color: white;
+        @media (min-width: $desktop) {
+            font-size: 18px;
+        }
+    }
 
-    
+    a {
+        font-size: 20px;
+        font-family: Roboto mono;
+        color: white;
+    }
+}
+
+.map {
+    margin-top: 140px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-bottom: 300px;
+    iframe {
+        height: 170px;
+        width: 100%;
+        @media (min-width: $desktop) {
+            height: 377px;
+            margin-top: 40px;
+        }
+    }
+ }
