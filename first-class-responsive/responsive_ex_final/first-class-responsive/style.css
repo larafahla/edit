@@ -1090,6 +1090,33 @@ img {
   font-family: Roboto mono;
 }
 
+.project_images {
+  margin-bottom: 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.project_images h2 {
+  font-family: Roboto mono;
+}
+
+.card {
+  position: relative;
+  margin-top: 17px;
+}
+
+.card a {
+  overflow: hidden;
+  display: block;
+}
+
+.card a img {
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+  width: 100%;
+  height: auto;
+}
+
 /* Contact page */
 .contact-info h1 {
   padding-top: 140px;

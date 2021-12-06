@@ -345,6 +345,29 @@ img {
     }
 }
 
+.project_images {
+    margin-bottom: 40px;
+    box-sizing: border-box;
+    h2 {
+        font-family: Roboto mono;
+    }
+}
+
+.card {
+    position: relative;
+    margin-top: 17px;
+    
+    a {
+        overflow: hidden;
+        display: block;
+        img {
+            transition: all .5s ease;
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
 /* Contact page */
 
 .contact-info {
