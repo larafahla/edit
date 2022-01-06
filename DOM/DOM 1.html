@@ -98,8 +98,12 @@
             li[i].style.color = "blue";
         }
 
-    
+        var checkedBoxes = document.querySelectorAll("input[type='checkbox']:checked")
+        for (var i = 0; i < checkedBoxes.length; i++) {
+            checkedBoxes[i].style.marginLeft = "50px";
+        }
         
+        document.getElementsByTagName("div")[2].getElementsByTagName("p")[1].style.border = 'solid white 5px'
         
 
 

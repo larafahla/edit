@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Calculator</title>
+</head>
+<body>
+​
+  <label>Square this number:
+    <input type="number" id="square-input" size="2">
+  </label>
+  <button id="square-button">Calculate</button>
+  <br><br>
+  
+  <label>Half this number:
+    <input type="number" id="half-input" size="2">
+  </label>
+  <button id="half-button">Calculate</button>
+  <br><br>
+  
+  <label>
+    Fraction:
+    <input type="number" id="percent1-input" size="2">
+  </label>
+  <label>
+    Whole:
+    <input type="number" id="percent2-input" size="2">
+  </label>
+  <button id="percent-button">Calculate</button>
+  <br><br>
+  
+  <label>Calculate area of circle with radius:
+    <input type="number" id="area-input" size="2">
+  </label>
+  <button id="area-button">Calculate</button> 
+  <br><br>
+  <div id="solution"></div>
+​
+<script>
+    // square
+    function squareNumber() {
+        document.getElementById("solution").innerHTML = document.getElementById("square-input").value**2;
+    }
+    document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("square-button").addEventListener("click", squareNumber);
+    });
+
+    // half
+    function halfNumber() {
+        document.getElementById("solution").innerHTML = document.getElementById("half-input").value/2;
+    }
+    document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("half-button").addEventListener("click", halfNumber);
+    });
+
+    // fraction
+    function fractionNumber() {
+        document.getElementById("solution").innerHTML = document.getElementById("percent1-input").value/document.getElementById("percent2-input").value;
+    }
+    document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("percent-button").addEventListener("click", fractionNumber);
+        document.getElementById("percent-button").addEventListener("click", fractionNumber);
+    });
+
+    // circle
+    function circleNumber() {
+        document.getElementById("solution").innerHTML = Math.PI * (document.getElementById("area-input").value**2);
+    }
+    document.addEventListener("DOMContentLoaded", function () {
+        //document.getElementById("area-button").addEventListener("click", circleNumber);
+        document.getElementById("area-input").addEventListener("keyup", circleNumber);
+    });
+
+
+</script>
+  
+</body>
+</html>
