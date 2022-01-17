@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+​
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Exercises</title>
+</head>
+​
+<body>
+    <h1 id="change_heading">TODOS</h1>
+    <h2>Part 3</h2>
+​
+    <p>For this assignment you will be combining your knowledge of DOM access and events to build a todo app!</p>
+​
+    <p>As a user, you should be able to:</p>
+​
+    <ul>
+        <li>Add a new todo (by submitting a form)</li>
+        <li>Mark a todo as completed (cross out the text of the todo)</li>
+        <li>Remove a todo</li>
+    </ul>
+​
+    <h2>Part 4:</h2>
+​
+    <p>Using localStorage, try to store your todos so that if you refresh the page you do not lose what you have added
+        to the list! As a super bonus, try to also save todos that you have marked as complete!</p>
+​
+    <br />
+    <form>
+        <input type="text" id="addTodo" placeholder="your todo" />
+        <input type="submit" value="add todo" />
+    </form>
+    <ul id="todoList">
+    </ul>
+​
+    <script>
+        var LS_KEY = "TODO_LIST";
+        var TODOS = JSON.parse(localStorage.getItem(LS_KEY)) || [];
+​
+        function save() {
+            debugger;
+            localStorage.setItem(LS_KEY, JSON.stringify(TODOS));
+        }
+​
+        function markTodo(todo) {
+            for(var i = 0; i< TODOS.length; i++) {
+                if(TODOS[i].value === todo) {
+                    TODOS[i].isCompleted = true;
+                }
+            }
+            save();
+        }
+​
+        function deleteTodo(todo) {
+            var todos_copy = [];
+            for(var i = 0; i< TODOS.length; i++) {
+                if(TODOS[i].value !== todo) {
+                    todos_copy.push(TODOS[i]);
+                }
+            }
+            TODOS = todos_copy;
+            save();
+        }
+​
+​
+        function addTodo(todo, isCompleted) {
+            const todoList = document.getElementById("todoList");
+            var li = document.createElement("li");
+            li.innerText = todo;
+            if(isCompleted) {
+                li.style.textDecoration = "line-through";
+            } else {
+                var markBtn = document.createElement("button");
+                markBtn.onclick = function(e) {
+                    e.target.parentNode.style.textDecoration = "line-through";
+                    e.target.outerHTML = "";
+                    markTodo(todo);
+                }
+                markBtn.innerText = "Complete";
+                li.appendChild(markBtn);
+            }
+​
+            var deleteBtn = document.createElement("button");
+            deleteBtn.onclick = function(e) {
+                e.target.parentNode.outerHTML = "";
+                deleteTodo(todo);
+            }
+            deleteBtn.innerText = "Delete";
+            li.appendChild(deleteBtn);
+            todoList.appendChild(li);
+        }
+        
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementsByTagName("form")[0].addEventListener("submit", function (e) {
+                e.preventDefault();
+                var todo = document.getElementById("addTodo").value;
+                document.getElementById("addTodo").value = "";
+                addTodo(todo);
+                TODOS.push({ value: todo });
+                save();
+            });
+​
+            for(var i = 0; i < TODOS.length; i++) {
+                addTodo(TODOS[i].value, TODOS[i].isCompleted);
+            }
+        });
+    </script>
+</body>
+​
+</html>
