@@ -17,15 +17,25 @@
  <button id="lib-button">Lib it!</button>
   
  <div id="story"></div>
-  
-<script>
-    function makeMadLib() {
+
+ <script>
+    /* function makeMadLib() {
         console.log(document.getElementById("person").value + " really likes " + document.getElementById
         ("adjective").value + " " + document.getElementById("noun").value);
     }
     document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("lib-button").addEventListener("click", makeMadLib) 
-    }); 
+    }); */
+
+    function libIt() {
+  var storyDiv = document.getElementById("story");
+  var person = document.getElementById("person").value;
+  var adjective = document.getElementById("adjective").value;
+  var noun = document.getElementById("noun").value;
+  storyDiv.innerHTML = person + " married a " + adjective + " " + noun + "... So weird!";
+}
+var libButton = document.getElementById('lib-button');
+    libButton.addEventListener('click', libIt);
 
 </script>
 
