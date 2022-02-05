@@ -320,7 +320,7 @@ padding: 0px 0px 0px 20px;
     font-weight: 600;
   }
   & p {
-    margin: 36px 16px 16px 18px;
+    margin: 36px 16px 16px 0px;
     font-size: 14px;
     font-weight: 500;
   }
@@ -358,3 +358,32 @@ padding: 0px 0px 0px 20px;
     font-weight: 500;
   }
 }
+
+.partnershipImages {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 0 10px;
+  & .solincalogo {
+    margin-right: 0px;
+  }
+  & .babylogo {
+    margin-right: 0px;
+  }
+  & .noslogo {
+    margin-right: 0px;
+  }
+  & .logoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 12px;
+      & p {
+        font-size: 12px;
+        font-weight: 500;
+        margin-top: 12px;
+      }
+  }
+}
+
+

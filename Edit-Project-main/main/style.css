@@ -1487,7 +1487,7 @@ html, body {
 }
 
 .offerSection p {
-  margin: 36px 16px 16px 18px;
+  margin: 36px 16px 16px 0px;
   font-size: 14px;
   font-weight: 500;
 }
@@ -1535,5 +1535,50 @@ html, body {
   margin: 36px 16px 16px 18px;
   font-size: 14px;
   font-weight: 500;
+}
+
+.partnershipImages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 0 0 10px;
+}
+
+.partnershipImages .solincalogo {
+  margin-right: 0px;
+}
+
+.partnershipImages .babylogo {
+  margin-right: 0px;
+}
+
+.partnershipImages .noslogo {
+  margin-right: 0px;
+}
+
+.partnershipImages .logoContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 12px;
+}
+
+.partnershipImages .logoContainer p {
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 12px;
 }
 /*# sourceMappingURL=style.css.map */
