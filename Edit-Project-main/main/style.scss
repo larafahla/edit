@@ -1,0 +1,322 @@
+@import "normalize";
+@import 'reset';
+@import "variables";
+@import "utils";
+@import "grid";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&display=swap");
+
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+#main-navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: $white;
+  transition: transform 0.2s;
+}
+
+.navbarTop {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 4rem;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  box-shadow: $borderShaddow;
+}
+
+.currentPoints {
+  background-color: $backgroundBlue;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+  border-radius: 50px;
+  width: 52px;
+  & div {
+    color: $iconBlue;
+  }
+
+  & div:last-child {
+    background-color: $iconBlue;
+    border-radius: 50%;
+    height: 5px;
+    width: 14px;
+  }
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 8px;
+    border-radius: 50%;
+    background-color: $iconBlue;
+  }
+  &::before {
+    top: 2px;
+    right: 11px;
+  }
+  &::after {
+    top: 16px;
+    right: 11px;
+  }
+}
+
+.navbarBottomOrganizer {
+  background-color: $white;
+  position: sticky;
+  bottom: 0;
+  height: 5.5rem;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  box-shadow: $borderShaddow;
+}
+
+.navbarBottom {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+
+.navHidden {
+  transform: translateY(-100px);
+}
+
+@media (min-width: $desktop) {
+}
+
+// On Boarding screen
+
+.backgroundColorOnBoarding {
+  background-color: $backgroundOnBoarding;
+}
+
+.backgroundColorGeneral {
+  background-color: $backgroundColorGeneral;
+}
+
+.logoOnBoarding {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 200px;
+}
+
+.bottomSheet {
+  display: flex;
+  flex-direction: column;
+  background-color: #ebf9f7;
+  width: 100%;
+  height: 415px;
+  bottom: 0;
+  position: absolute;
+  border-radius: 40px 40px 0 0;
+}
+
+.bottomSheetDiv {
+  margin: 40px 30px 0 30px;
+  & h1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 6.7em;
+    font-weight: 600;
+    font-size: 26px;
+  }
+}
+
+.bottomSheetSubDiv {
+  margin: 0 40px 20px 40px;
+}
+
+.bottomSheetSubText {
+  display: flex;
+  justify-content: center;
+  height: auto;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.buttonContainer {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.buttonOnBoarding {
+  margin: auto;
+  width: 80%;
+  height: 3.5em;
+  background-color: #00b09b;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+}
+
+.dotsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: auto;
+}
+
+.bigDot {
+  background-color: gray;
+  width: 15px;
+  height: 5px;
+  border-radius: 20px;
+  margin: 0 5px 0 0;
+}
+
+.smallDot {
+  background-color: gray;
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+  margin: 0 5px 0 0;
+}
+
+// navbar flutuante
+
+.floatingNavbarOrganizer {
+  position: fixed;
+  bottom: 4%;
+  height: 3.7rem;
+  background-color: $white;
+  box-shadow: $borderShaddow;
+  border-radius: 40px;
+  width: 12.5rem;
+}
+
+.floatingNavbar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+  & a {
+    height: 34px;
+  }
+}
+
+#bottomNav {
+  display: flex;
+  justify-content: center;
+}
+
+// splash screens
+
+.splashLogo {
+  border-style: none;
+  width: 155px;
+}
+
+.splashLogoContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 90%;
+  align-items: center;
+}
+
+// wallet page
+
+.userCard {
+  display: flex;
+  width: 319px;
+  height: 144px;
+  background-color: $white;
+  border-radius: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+  box-shadow: $borderShaddow;
+  align-content: space-evenly;
+}
+
+.userCardTop {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 0px 0px 20px;
+}
+
+.userInfo {
+display: flex;
+-webkit-box-orient: vertical;
+-webkit-box-direction: normal;
+flex-direction: column;
+& h1 {
+  font-family: Poppins, sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  padding-bottom: 5px;
+
+}
+& h4 {
+  font-family: Poppins, sans-serif;
+  font-size: 12px;
+  color: #018EAA;
+  font-weight: 500;
+
+}
+}
+.avatarJoana {
+margin-right: 12px;
+}
+
+.userGift {
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+vertical-align: baseline;
+display: flex;
+flex-wrap: wrap;
+padding: 0px 0px 0 20px;
+& p {
+  font-size: 12px;
+  padding-left: 12px;
+}
+}
+
+.userFriends {
+  margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+vertical-align: baseline;
+display: flex;
+flex-wrap: wrap;
+padding: 0px 0px 0px 20px;
+& p {
+  font-size: 12px;
+  padding-left: 12px;
+
+}
+}
+
+.offerSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  & span {
+    margin: 36px 0px 16px 18px;
+    font-size: 26px;
+    font-weight: 600;
+  }
+  & p {
+    margin: 36px 16px 16px 18px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+}

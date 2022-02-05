@@ -1,0 +1,28 @@
+$primary: #018eaa;
+$backgroundBlue: #f2f9fa;
+$backgroundOnBoarding: #018eaa;
+$backgroundColorGeneral: #fafafa;
+$iconBlue: #3ea9be;
+$white: #fff;
+$black: #121212;
+$gray: #c6c6c6;
+$borderShaddow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+$tablet: 750px;
+$desktop: 960px;
+$desktoplg: 1400px;
+
+$gridgutter: 20px;
+
+$gridcolumns: 6;
+$gridgutter: 20px;
+$i: 1;
+
+$gridwidth: calc(100% - #{$gridgutter} - 60px);
+$gridwidtht: calc(90% - #{$gridgutter});
+$gridwidthd: $desktop - $gridgutter * 2;
+$gridwidthdlg: $desktoplg - $gridgutter * 3;
+
+$basefontsizemobile: $gridgutter / 3 * 2;
+$basefontsizetablet: $gridgutter / 3 * 2 + 1;
+$basefontsizedesktop: $gridgutter / 3 * 2 + 2;
