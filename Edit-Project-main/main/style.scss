@@ -11,6 +11,7 @@
 }
 
 html, body {
+  height: 100vh;
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
@@ -24,6 +25,11 @@ html, body {
   transition: transform 0.2s;
 }
 
+.container{
+  flex-direction: column;
+  height: 100vh;
+  display: flex;
+}
 .navbarTop {
   display: flex;
   justify-content: space-around;
@@ -105,41 +111,44 @@ html, body {
   background-color: $backgroundColorGeneral;
 }
 
-.logoOnBoarding {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 200px;
+.onBoardingIllustration {
+  & img {
+    line-height: 0;
+    width: 100vw;
+    object-fit: cover;
+  }
+  margin-bottom: 1px;
+  line-height: 0;
+  flex: 1;
 }
 
 .bottomSheet {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  background-color: #ebf9f7;
   width: 100%;
-  height: 415px;
-  bottom: 0;
-  position: absolute;
-  border-radius: 40px 40px 0 0;
 }
 
 .bottomSheetDiv {
   margin: 40px 30px 0 30px;
-  & h1 {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 6.7em;
     font-weight: 600;
     font-size: 26px;
-  }
+    text-align: center;
+    flex:1;
 }
 
 .bottomSheetSubDiv {
-  margin: 0 40px 20px 40px;
+  margin: 40px;
 }
 
 .bottomSheetSubText {
+  line-height: 21px;
+  flex: 1;
+  margin: 0px 40px;
   display: flex;
   justify-content: center;
   height: auto;
@@ -148,21 +157,27 @@ html, body {
   text-align: center;
 }
 
-.buttonContainer {
-  text-align: center;
+.buttonWrapper {
   display: flex;
+  align-items: center;
   justify-content: center;
+  text-decoration: none;
 }
 
 .buttonOnBoarding {
+ 
   margin: auto;
   width: 80%;
   height: 3.5em;
-  background-color: #00b09b;
+  background-color: $primary;
   border: none;
   border-radius: 8px;
   color: white;
   text-decoration: none;
+}
+
+.login {
+  margin-top: 10px;
 }
 
 .dotsContainer {
@@ -170,10 +185,13 @@ html, body {
   flex-direction: row;
   justify-content: center;
   margin: auto;
+  height: 25px;
+  margin: 36px 0;
+  align-items: center;
 }
 
 .bigDot {
-  background-color: gray;
+  background-color: $primary;
   width: 15px;
   height: 5px;
   border-radius: 20px;
@@ -181,11 +199,26 @@ html, body {
 }
 
 .smallDot {
-  background-color: gray;
+  background-color: $primary;
   width: 5px;
   height: 5px;
-  border-radius: 100%;
+  border-radius: 100%; 
   margin: 0 5px 0 0;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.bottomSheetDiv2 {
+    margin: 40px 20px 40px 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 9.3em;
+    font-weight: 600;
+    font-size: 26px;
+    text-align: center;
 }
 
 // navbar flutuante
@@ -231,28 +264,44 @@ html, body {
 
 // wallet page
 
+.elipse {
+  position: fixed;
+  z-index: -1;
+  transform: translate(0px, -55px);
+}
+
 .walletTopbar {
   width: 100%;
   height: 70px;
 }
 
 .userCard {
-  display: flex;
+  // display: flex;
   width: 319px;
   height: 144px;
-  background-color: $white;
-  border-radius: 20px;
-  align-items: center;
-  flex-wrap: wrap;
+
+   background-color: $white;
+   border-radius: 20px;
+  // align-items: center;
+  // flex-wrap: wrap;
   box-shadow: $borderShaddow;
-  align-content: space-evenly;
+  // align-content: space-evenly;
+
+  &-container{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  
+  }
+
+
 }
 
 .userCardTop {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 10px 0px 0px 20px;
+  padding: 20px 0px 0px 20px;
 }
 
 .userInfo {
@@ -270,8 +319,12 @@ flex-direction: column;
 & h4 {
   font-family: Poppins, sans-serif;
   font-size: 12px;
-  color: #018EAA;
-  font-weight: 500;
+  color: #959595;
+  font-weight: 400;
+  & span {
+    color: $primary;
+    font-weight: 400;
+  }
 
 }
 }
@@ -291,6 +344,10 @@ padding: 0px 0px 0 20px;
 & p {
   font-size: 12px;
   padding-left: 12px;
+  font-weight: 500;
+  & span {
+    color: $primary;
+  }
 }
 }
 
@@ -306,40 +363,70 @@ padding: 0px 0px 0px 20px;
 & p {
   font-size: 12px;
   padding-left: 12px;
-
+  font-weight: 500;
+  & span {
+    color: $primary;
+  }
 }
 }
 
 .offerSection {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 25px; 
+
   & span {
-    margin: 36px 0px 16px 18px;
     font-size: 26px;
     font-weight: 600;
   }
   & p {
-    margin: 36px 16px 16px 0px;
     font-size: 14px;
     font-weight: 500;
   }
 }
 
+.offerImagesContainer {
+    position: relative;
+  }
+
+.offerImagesTextContainer {
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    z-index: 100;
+    & p {
+      color: $white;
+      font-weight: 500;
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+    & h4 {
+      font-size: 12px;
+      color: $white;
+      font-weight: 400;
+    }
+  }
+
+ 
+
+
 .offerImages {
   display: flex;
   margin: 0 0 0 18px;
+  align-items: flex-start;
   & .girlImage {
     border-radius: 20px;
     margin-right: 5px;
   }
   & .bottleImage {
-    border-radius: 20px
+    border-radius: 20px;
+    margin-right: 4px;
   }
 
   & .bellyImage {
     border-radius: 20px;
-    margin-left: 5px;
   }
 }
 
@@ -384,6 +471,17 @@ padding: 0px 0px 0px 20px;
         margin-top: 12px;
       }
   }
+}
+
+.align-content{
+  position: relative;
+  display: flex;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
 }
 
 
