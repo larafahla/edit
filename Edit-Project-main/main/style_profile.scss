@@ -1,0 +1,231 @@
+@import "normalize";
+@import 'reset';
+@import "variables";
+@import "utils";
+@import "grid";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&display=swap");
+
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+//top bar
+.navColorFill {
+  background-color: $white;
+  position: sticky;
+  top: 0;
+}
+
+.navbarTop {
+  height: 4.5rem;
+  display: flex;
+  margin-bottom: 2em;
+  border-bottom: solid #f1f1f1 0.5px;
+  & div:first-child {
+      margin: 20px;
+  }
+}
+.iconOrganizer {
+  display: flex;
+  justify-content: end;
+  & div:first-child {
+      margin: 10px 7px 0 0;
+  }
+  & div:last-child {
+      margin: 10px 0 0 7px;
+  }
+}
+// end
+
+// Menu title
+
+.profileTitle {
+    display: flex;
+    flex-direction: column;
+    margin: 120px 20px 0px 20px;
+    & h1 {
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 45px;
+    }
+    & span {
+        font-size: 16px;
+        color: $secondary;
+        line-height: 24px;
+    }
+    & label {
+        font-size: 12px;
+    }
+}
+
+.profileTitleLogin {
+    display: flex;
+    flex-direction: column;
+    margin: 367px 20px 0 20px;
+    & h1 {
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 45px;
+    }
+    & span {
+        font-size: 16px;
+        color: $secondary;
+        line-height: 24px;
+    }
+    & label {
+        font-size: 12px;
+    }
+}
+
+
+
+// Menu sections 
+
+.topSection {
+    margin-top: 24px;
+}
+
+.sectionContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin: 0 20px;
+    & span {
+        display: flex;
+        flex: 1;
+        padding: 20px 20px 20px 0;
+        font-size: 16px;
+        font-weight: 600;
+
+    }
+    & .avatar {
+        margin-right: 10%;
+    }
+}
+
+section.bottomSection {
+    margin-top: 210px;
+}
+
+.blueLineContainer {
+    display: flex;
+    justify-content: center;
+}
+.blueLine {
+    width: 279px;
+    background-color: $primary;
+    opacity: 10%;
+    height: 1px;
+}
+
+// Personal Data Form 
+
+.formContainer {
+    margin-top: 24px;
+    & #fname {
+        width: 100%;
+        height: 40px;
+        background-color: $secondaryBlue;
+        border-radius: 8px;
+        border: none;
+        margin: 10px 0 20px 0;
+        padding: 12px 20px;
+        & span {
+            color: red;
+        }
+    }
+}
+
+.dataButton {
+    color: $white;
+    background-color: $primary;
+    height: 42px;
+    border-radius: 8px;
+    border: none;
+    margin: 20px 20px;
+}
+
+// Help Page
+
+.helpBoxesContainer {
+    margin-top: 40px;
+    & .helpBoxes {
+    height: 80px;
+    display: flex;
+    align-items: center; 
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.04);
+    border-radius: 14px;
+    margin: 0 25px 24px 25px;
+    & .helpIcon {
+        margin: 0 20px;
+    }
+    & .helpText {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        & span {
+            font-size: 18px;
+            font-weight: 600;
+        }
+        & p {
+            margin-top: 5px;
+            font-size: 14px;
+            font-weight: 400;
+            color: $primary;
+            }
+        }
+    }
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    margin-top: 130px;
+}
+
+// Register screen
+
+.registerButton {
+    color: $white;
+    background-color: $primary;
+    height: 42px;
+    border-radius: 8px;
+    border: none;
+    margin: 20px 20px 7px 20px;
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 27px;
+    & span {
+        font-size: 12px;
+        & span {
+            border-bottom: solid 1px;
+        }
+    }
+}
+
+.alternativeLogin {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 24px;
+    color: black;
+    background-color: $white;
+    height: 40px;
+    border: $gray solid 1px;
+    border-radius: 20px;
+    margin: 16px 20px 0px 20px;
+    & img {
+        padding-right: 20px;
+    }
+}
