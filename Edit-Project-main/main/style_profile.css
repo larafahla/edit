@@ -1134,7 +1134,7 @@ html, body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 120px 20px 0px 20px;
+  margin: 0px 20px;
 }
 
 .profileTitle h1 {
@@ -1150,6 +1150,33 @@ html, body {
 }
 
 .profileTitle label {
+  font-size: 12px;
+}
+
+.profileTitleRegister {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 120px 20px 0px 20px;
+}
+
+.profileTitleRegister h1 {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 45px;
+}
+
+.profileTitleRegister span {
+  font-size: 16px;
+  color: #8c8c8c;
+  line-height: 24px;
+}
+
+.profileTitleRegister label {
   font-size: 12px;
 }
 
