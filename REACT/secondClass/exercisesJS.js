@@ -27,23 +27,22 @@ function myFunction(number) {
 
 console.log(myFunction(15));
 
-// #3 Temperatures
+// #3 Temperatures -- nao funcionou --
 
-function cToF(celsius) 
-{
-  var cTemp = celsius;
-  var cToFahr = cTemp * 9 / 5 + 32;
-  var message = cTemp+'is ' + cToFahr + ' \xB0F.';
-    console.log(message);
+function cToF(celsius) {
+  const cTemp = celsius;
+  const cToFahr = cTemp * 9 / 5 + 32;
+    
+  return cToFahr;
 }
 
-function fToC(fahrenheit) 
-{
-  var fTemp = fahrenheit;
-  var fToCel = (fTemp - 32) * 5 / 9;
-  var message = fTemp+'\xB0F is ' + fToCel + '\xB0C.';
-    console.log(message);
+function fToC(fahrenheit) {
+  const fTemp = fahrenheit;
+  const fToCel = (fTemp - 32) * 5 / 9;
+  
+  return fToCel;
 } 
+
 cToF(60);
 fToC(45);
 
