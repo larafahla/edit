@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>React App</title>
+  </head>
+  <body>
+    <style>
+      h1 {color: blue}
+      h2 {color: red}
+      h3 {color: yellow}
+      h4 {color: green}
+
+    </style>
+    <h2>React skeleton</h2>
+    <!-- We will put our React component inside this div. -->
+    <div id="container"></div>
+    <div id="container2"></div>
+    <div id="container3"></div>
+    <div id="container4" style="color: blue;">
+    </div>
+    <div id="container5"></div>
+    <div id="container6"></div>
+    <!-- Load React. -->
+    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js" crossorigin></script>
+    <script type="text/babel">
+    
+    // React Code Here
+    // _____________________ ex 7 (de first_exercises_class)
+      
+    class Welcome extends React.Component {
+    render() {
+      return (<div> <ul>
+      <li>First Item</li> 
+      <li>Second Item</li> 
+      </ul> </div>);
+    }
+  }
+  const element = <Welcome/>
+  ReactDOM.render(element, document.getElementById('container'))
+
+  // _____________________ ex 8 (de first_exercises_class)
+
+  class ItemsList extends React.Component {
+
+    mapAndFilterElements(obj) {
+        const keys = Object.keys(obj);
+
+        const arr = keys.map((key) => {
+            return obj[key]
+  });
+
+    const filtered = arr.filter((elem) => {return elem.number > 2; });
+
+    return filtered.reverse();
+
+    }
+    render() {
+        /* const filteredElements = this.mapAndFilterElements(this.props.myObj);
+        const liInside = filteredElements.map(element => <li className={element.class}) */
+        
+    }
+  }
+
+  const element = <ItemsList myObj={items} />
+
+  const keys = Object.keys(items);
+
+  const arr = keys.map((key) => {
+      return items[key]
+  });
+
+  const filtered = arr.filter((elem) => {return elem.number > 2; });
+
+
+  // _____________________ ex 9 (de first_exercises_class)
+
+  class Button extends React.Component {
+          
+    constructor(props) {
+      super();
+
+      this.state = {
+        list: props.list
+      }
+    }
+
+    reserveButton = () => {
+        const arr = [].concat(this.state.list) 
+        arr.reverse()
+        this.setState({list:arr}) 
+    }
+
+      render () {
+          const li = this.state.list.map(element => {
+              return <li> {
+                  element 
+              } </li>
+          })
+          return <div><ul> {li}  </ul>
+          <button onClick={this.reserveButton}>Click me</button></div> 
+      }
+  }
+
+  const newList = [1, 2];
+
+  const elements = <Button list={newList}/> 
+  ReactDOM.render(elements, document.getElementById('container3'))
+
+    </script>
+  </body>
+</html>
