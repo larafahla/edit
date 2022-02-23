@@ -44,6 +44,25 @@
 
   // _____________________ ex 8 (de first_exercises_class)
 
+  const items = {
+            '2': {
+                class: 'number_two',
+                number: 2
+            },
+            'number_three': {
+                class: 'number_three',
+                number: 3
+            },
+            '4': {
+                class: 'number_four',
+                number: 4
+            },
+            'number_one': {
+                class: 'number_one',
+                number: 1
+            }
+        };
+
   class ItemsList extends React.Component {
 
     mapAndFilterElements(obj) {
@@ -65,7 +84,7 @@
     }
   }
 
-  const element = <ItemsList myObj={items} />
+  const element2 = <ItemsList myObj={items} />
 
   const keys = Object.keys(items);
 
@@ -96,19 +115,73 @@
 
       render () {
           const li = this.state.list.map(element => {
-              return <li> {
-                  element 
-              } </li>
+              return <li> {element} </li>
           })
-          return <div><ul> {li}  </ul>
-          <button onClick={this.reserveButton}>Click me</button></div> 
+          return (<div><ul>{li}</ul>
+          <button onClick={this.reserveButton}>Click me</button></div>)
       }
   }
 
   const newList = [1, 2];
 
   const elements = <Button list={newList}/> 
-  ReactDOM.render(elements, document.getElementById('container3'))
+  // ReactDOM.render(elements, document.getElementById('container3'))
+
+// _____________________ ex 9 (de first_exercises_class)_______________(com functional components)________*useEfect e useState são hooks*
+  /* const Button2 = () => {
+    const [name, setName] = React.useState("Name Test")
+  
+
+  React.useEffect(() => {
+      console.log("console log cenas:" + name);
+  });
+
+  return (
+      <div>
+        <p>The Name is: {name}</p>
+        <button onClick={}></button>
+    </div>
+  )} */
+
+// _____________________ ex 9 (de first_exercises_class)_______________(com functional components e mudando nomes de variaveis e funçoes para os nomes do prof)________*useEfect e useState são hooks*
+const items = [1, 2];
+
+const ItemsList2 = () => {
+    const [list, setList] = React.useState(props.list);
+
+    const handleClick = () => {
+        const copyList = [].concat(list);
+
+        copyList.reverse();
+
+        setList(copyList);
+    }
+
+    const button = <button onClick={handleClick}>Click me!</button>
+
+    const li = list.map((element, index) => <li key={index}>{element}</li>)
+    const ul = <ul>{li}</ul>
+    const div = <div>{ul}{button}</div>
+
+    return div;
+
+  }
+
+  const exe9 = <ItemsList2 list={items} />
+
+
+  ReactDOM.render(exe9, document.getElementById('container3'));
+
+  // _____________________ ex 10 (de components_exercises_2)_______________
+
+const button = <button onClick={handleClick}>Click me!</button>
+
+const li = list.map((element, index) => <li key={index}>{element}</li>)
+const ul = <ul>{li}</ul>
+const div = <div>{ul}{button}</div>
+
+
+
 
     </script>
   </body>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>React App</title>
+  </head>
+  <body>
+    <style>
+      h1 {color: blue}
+      h2 {color: red}
+      h3 {color: yellow}
+      h4 {color: green}
+
+    </style>
+    <h2>React skeleton</h2>
+    <!-- We will put our React component inside this div. -->
+    <div id="container"></div>
+    <div id="container2"></div>
+    <div id="container3"></div>
+    <div id="container4" style="color: blue;">
+    </div>
+    <div id="container5"></div>
+    <div id="container6"></div>
+    <!-- Load React. -->
+    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js" crossorigin></script>
+    <script type="text/babel">
+
+        // React code here
+    
+// _____________________ ex 9 (de first_exercises_class)_______________(com functional components e mudando nomes de variaveis e funçoes para os nomes do prof)________*useEfect e useState são hooks*
+const items = [1, 2];
+
+const ItemsList2 = (props) => {
+    const [list, setList] = React.useState(props.list);
+
+    const handleClick = () => {
+        const copyList = [].concat(list);
+
+        copyList.reverse();
+
+        setList(copyList);
+    }
+
+    const button = <button onClick={handleClick}>Click me!</button>
+
+    const li = list.map((element, index) => <li key={index}>{element}</li>)
+    const ul = <ul>{li}</ul>
+    const div = <div>{ul}{button}</div>
+
+    return div;
+
+  }
+
+  const exe9 = <ItemsList2 list={items} />
+  ReactDOM.render(exe9, document.getElementById('container'));
+
+    // _____________________ ex 10 (de components_exercises_2)_______________
+
+    const idName = [{ id: "to_remove", text: 1 }, { id: 2, text: "2" }];        
+        const btnLog = () => {
+            console.log("log");
+        }
+        const btnRemove = () => {
+            document.getElementById("to_remove").remove();
+        }
+        const ItemList = (props) => {
+            const button = <button onClick={props.clickFN}>{props.btnText}</button>
+            const li = props.list.map((element, index) => <li id={element.id} key={index}>{element.text}</li>)
+            const ul = <ul>{li}{button}</ul>
+            return ul
+        }
+        const ex10 = <ItemList list={idName} btnText="log" clickFN={btnLog} />
+        const ex10Two = <ItemList list={idName} btnText="remove" clickFN={btnRemove} />
+        const finalDiv = <div>{ex10}{ex10Two}</div>
+        ReactDOM.render(finalDiv, document.getElementById("container2"));
+
+    //_______________________ ex 11 ___________________________________________
+const fields = [{name: "username", type: "text"}]
+const forms = [{userName: ["username", "text"], Password: ["Password", "password"], Email: ["email"]}]
+
+const MyForm = (props) => {
+    return (
+    <form>
+      <label>Enter your name:
+        <input type="text" />
+      </label>
+    </form>
+  )
+    const 
+
+}
+
+ReactDOM.render(<MyForm />, document.getElementById('container3'));
+
+    </script>
+  </body>
+</html>
