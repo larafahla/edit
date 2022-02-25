@@ -78,22 +78,68 @@ const ItemsList2 = (props) => {
         ReactDOM.render(finalDiv, document.getElementById("container2"));
 
     //_______________________ ex 11 ___________________________________________
-const fields = [{name: "username", type: "text"}]
+const fields = [{name: "username", type: "text", id: "username"}]
 const forms = [{userName: ["username", "text"], Password: ["Password", "password"], Email: ["email"]}]
 
-const MyForm = (props) => {
-    return (
-    <form>
-      <label>Enter your name:
-        <input type="text" />
-      </label>
-    </form>
-  )
-    const 
+const MyForm = (fields) => {
+    console.log(fields);
+}
 
+const DynamicForm = (props) => {
+    const drawInput = (name, id) => {
+        return <input name={name} id={id}></input>
+    }
+    
+    const drawFields = (fields) => {
+        fields.forEach((field) => {
+            if (field === 'input') drawInput(field.name, field.id);
+            if (field === 'pass') drawInput(field.name, field.id);
+        });
+    }
+    return <form>{drawFields(props.fields)}</form>
 }
 
 ReactDOM.render(<MyForm />, document.getElementById('container3'));
+
+    //_______________________ ex 13 (com promises) _____________________________
+
+const promise = () => {
+    return new Promise(function (resolve, reject) {
+        setTimeout(() => {
+            return resolve('React');
+        }, 1000);
+    });
+};
+
+class Exe13 extends React.Component {
+    constructor () {
+        super();
+
+        this.state = {
+            title: ''
+        }
+    }
+
+    componentDidMount() {
+        const result = promise().then(data => {
+            this.setState({title: data})
+        });
+    }
+
+    render() {
+        return <h1>Hello {this.state.title}</h1>
+        }
+        
+    }
+
+const list = <Exe13 />;
+
+ReactDOM.render(list, document.getElementById('container4'));
+
+// como resolver uma promise no geral <-
+promise().then(data => {
+    console.log(data);
+}) //___________________________________
 
     </script>
   </body>
