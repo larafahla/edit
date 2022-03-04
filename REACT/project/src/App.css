@@ -102,6 +102,7 @@
     background-color: #2268d3;
     color: white;
     margin-top: 60px;
+    font-size: 16px;
 }
 
 /* Comment Section */
@@ -131,9 +132,10 @@
     max-width: 200px;
     border: none;
     border-radius: 20px;
-    background-color: #2268d3;
+    background-color: #0e9747;
     color: white;
     margin-top: 20px;
+    font-size: 16px;
 }
 .commentContainer {
     display: flex;

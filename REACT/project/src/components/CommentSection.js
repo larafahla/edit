@@ -3,15 +3,8 @@ import FormBuilder from './FormBuilder'
 import CommentFeed from '../components/CommentFeed'
 
 
-const singleComment = {
-    name: 'Lara',
-    text: 'O ideal é ela conduzir em sítios sem movimento tipo zonas industriais ao fim de semana para combater a ansiedade de andar no meio do trânsito. Ela tem que ter confiança no carro primeiro. Acelerar e travar várias vezes para saber como o carro responde.'
-}
-
-
 function CommentSection() { 
     const [commentList, setCommentList] = useState([]) 
-
     const addComment = (comment, name) => {
         setCommentList(
             [
@@ -23,11 +16,18 @@ function CommentSection() {
             ]
          )
     }
+    const removeComment = (text) => {
+        const filteredArray = commentList.filter(comment => {
+            return comment.text !== text
+        })
+        setCommentList(filteredArray)
+
+    }
 
     return (
         <React.Fragment>
             <FormBuilder addCommentFunc={addComment} />
-            <CommentFeed commentListVar={commentList}/>
+            <CommentFeed commentListVar={commentList} removeCommentFunc={removeComment}/>
         </React.Fragment>
     )
 }
