@@ -1,0 +1,157 @@
+.parentAppDiv {
+    display: flex;
+    margin-left: 120px;
+}
+.parentAppDiv2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.parentDiv {
+    max-width: 700px;
+    background-color: white;
+    border-radius: 10px;
+}
+.postTitle {
+    font-size: 20px;
+    margin: 20px;
+}
+.postText {
+    font-size: 14px;
+    margin: 20px;
+}
+.postInfo {
+    font-size: 12px;
+}
+.redditThumbnail {
+    width: 20px;
+    border-radius: 100%;
+    margin-right: 10px;
+}
+.infoDiv {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+.helpText {
+    background-color: #005c5c;
+    color: white;
+    font-size: 12px;
+    padding: 0 5px;
+    margin: 20px;
+}
+.postOptions {
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+}
+.postOptions > p {
+    font-size: 12px;
+    margin-right: 20px;
+}
+
+/* About me */
+
+.parentDivAboutme {
+    width: 310px;
+    height: 350px;
+    border-radius: 10px;
+    background-color: white;
+    margin-left: 20px;
+    padding: 10px;
+}
+.biggerRedditThumbnail {
+    width: 50px;
+    border-radius: 100%;
+    margin-right: 10px;
+}
+.aboutMeTitle {
+    display: flex;
+    align-items: center;
+}
+.aboutMeInfo {
+    display: flex;  
+}
+.tugas {
+    display: flex;
+    flex-direction: column;
+    padding-right: 60px;
+    font-weight: 700;
+}
+.tugas > .text {
+    font-size: 12px;
+    font-weight: 400;
+}
+.bacalhau {
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+}
+.bacalhau > .text {
+    font-size: 12px;
+    font-weight: 400;
+}
+.aboutMeButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    background-color: #2268d3;
+    color: white;
+    margin-top: 60px;
+}
+
+/* Comment Section */
+.parentDivComments {
+    display: flex;
+    margin-top: 40px;
+    flex-direction: column;
+    margin-left: 120px;
+}
+.commentInput {
+    height: 200px;
+    width: 700px;
+    border: none;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+.nameInput {
+    height: 50px;
+    width: 300px;
+    border: none;
+    border-radius: 10px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+.addCommentButton {
+    height: 40px;
+    max-width: 200px;
+    border: none;
+    border-radius: 20px;
+    background-color: #2268d3;
+    color: white;
+    margin-top: 20px;
+}
+.commentContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 700px;
+    margin-left: 120px;
+    margin-top: 40px;
+    border-radius: 10px;
+    padding-left: 22px;
+    height: 200px;
+}
+.removeCommentButton {
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    background-color: #d44e3d;
+    color: white;
+    width: 100px;
+    margin-top: 20px;
+}
